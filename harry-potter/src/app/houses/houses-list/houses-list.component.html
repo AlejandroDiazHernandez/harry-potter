@@ -1,0 +1,32 @@
+<!-- <button routerLink="1">details</button> -->
+
+<div>
+    <a class="anchor-back" [routerLink]="['']">HOME</a>
+</div>
+
+<div class="container">
+    <div class="container__details__title">
+        <h2>Learn about your house: </h2>
+    </div>
+    <div class="container__details ">
+        <div>
+            <article class="container__details__items">
+                <ul *ngFor="let house of housesList" class="ul-detail">
+                    <li><img class="container__details__items__item1" src="{{ house.img }}" alt="{{ house.name }}"></li>
+                    <li class="li-detail"><h4 class="container__details__items__item2">House: {{ house.name }}</h4></li>
+                    <li class="li-detail">House mascot: {{house.mascot}}</li>
+                    <li class="li-detail">Head of the House: {{house.headOfHouse}}</li>
+                    <li class="li-detail">House Ghost: {{house.houseGhost}}</li>
+                    <li class="li-detail">Founder: {{house.founder}}</li>
+                    <li class="li-detail">Values: 
+                        <span *ngFor="let adj of house.values; index as i">{{adj}}<span *ngIf="i < house.values.length-1">, </span></span>
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a class="anchor-back" [routerLink]="['']">HOME</a>
+</div>

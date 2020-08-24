@@ -1,0 +1,33 @@
+<div>
+    <a class="anchor-back" [routerLink]="['']">VOLVER</a>
+    <button class="btnSearchForm" routerLink="../searchForm">Find your wizards</button>
+</div>
+
+<div class="container">
+    <div class="container__details__title">
+        <h2>Todo sobre tus personajes de la saga: </h2>
+    </div>
+    <div class="container__details ">
+        <div>
+            <article class="container__details__items">
+                <ul *ngIf='charactersDetails' class="ul-detail">
+                    <li><img class="container__details__items__item1" src="{{ charactersDetails.image }}" alt="{{ charactersDetails.name }}"></li>
+                    <li class="li-detail"><h4 class="container__details__items__item2">Nombre: {{ charactersDetails.name }}</h4></li>
+                    <li class="li-detail">Date of Birth: {{charactersDetails.dateOfBirth}}</li>
+                    <li class="li-detail">Blood: {{charactersDetails.ancestry}}</li>
+                    <li class="li-detail">Wand wood: {{charactersDetails.wand.wood}}</li>
+                    <li class="li-detail">Wand Core: {{charactersDetails.wand.core}}</li>
+                    <li class="li-detail">Wand length: {{charactersDetails.wand.length}}cm</li>
+                    <li class="li-detail">Patronus: {{charactersDetails.patronus}}</li>
+                    <li class="li-detail">Student: {{charactersDetails.hogwartsStudent}}</li>
+                    <li class="li-detail">Professor: {{charactersDetails.hogwartsStaff}}</li>
+                    <li class="li-detail">Actor: {{charactersDetails.actor}}</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a class="anchor-back" [routerLink]="['']">HOME</a>
+</div>

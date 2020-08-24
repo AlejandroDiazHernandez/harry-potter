@@ -1,0 +1,72 @@
+<form class="form" novalidate (ngSubmit)="onSearchSubmit()" [formGroup]="searchFormGroup">
+  <fieldset class="form__fieldset">
+    <legend class="form__fieldset-legend">BUSCADOR: </legend>
+    
+    <div class="form__fieldset-label">
+      <label class="form__fieldset-label-item" for="name">Busca por personaje</label>
+      <input type="text" id="name" formControlName="name">
+    </div>
+
+    <div class="error" *ngIf="!searchFormGroup.get('name').valid && (searchFormGroup.get('name').dirty || submitted)">
+        Mínimo 5 caracteres
+    </div>
+
+    <div class="form__fieldset-label">
+      <label class="form__fieldset-label-item" for="bloodStatus">Blood Status:</label>
+      <select name="bloodStatus" id="bloodStatus" formControlName="bloodStatus">
+        <option *ngFor="let blood of bloodStatusList " [ngValue]='blood'>{{blood}}</option>
+      </select>
+    </div>
+
+    <div class="form__fieldset-block">
+      <div class="form__fieldset-block-houses">
+        <label class="form__fieldset-label-item" for="ravenclaw">Ravenclaw</label>
+        <input type="radio" id="ravenclaw" name="house" formControlName="house" value="Ravenclaw" checked>
+      </div>
+
+
+ 
+      <div class="form__fieldset-block-houses">
+        <label class="form__fieldset-label-item" for="gryffindor">Gryffindor</label>
+        <input type="radio" id="gryffindor" name="house" formControlName="house" value="Gryffindor">
+      </div>
+
+
+ 
+      <div class="form__fieldset-block-houses">
+        <label class="form__fieldset-label-item" for="hufflepuff">Hufflepuff</label>
+        <input type="radio" id="hufflepuff" name="house" formControlName="house" value="Hufflepuff">
+      </div>
+ 
+      <div class="form__fieldset-block-houses">
+        <label class="form__fieldset-label-item" for="slytherin">Slytherin</label>
+        <input type="radio" id="slytherin" name="house" formControlName="house" value="Slytherin">
+      </div>
+    </div>
+ 
+  </fieldset>
+  <button type="submit">Submit</button>
+  <button (click)="reset()" type="button">Reset</button>
+</form>
+
+
+<div class="container">
+  <div class="container__search__title">
+      <h2>Todo sobre tus personajes de la saga: </h2>
+  </div>
+  <div class="container__search ">
+      <div>
+          <article class="container__search__items">
+              <ul *ngFor="let result of searchList" class="ul-search">
+                  <li class="li-search"><h4 class="container__search__items__item2">Nombre: {{ result.name }}</h4></li>
+                  <li class="li-search">House: {{result.house}}</li>
+                  <li class="li-search">BloodStatus: {{result.bloodStatus}}</li>
+              </ul>
+          </article>
+      </div>
+  </div>
+</div>
+
+<div>
+  <a class="anchor-back" [routerLink]="['']">HOME</a>
+</div>

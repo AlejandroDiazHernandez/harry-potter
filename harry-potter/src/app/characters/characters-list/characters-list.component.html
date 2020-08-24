@@ -1,0 +1,26 @@
+<div>
+    <a class="anchor-back" [routerLink]="['']">VOLVER</a>
+    <button class="btnSearchForm" routerLink="searchForm">Find your wizards</button>
+</div>
+
+<div class="container">
+    <div class="container__list__title">
+        <h2>Todos los personajes de la saga</h2>
+    </div>
+    <div class="container__list ">
+        <app-character-list-item *ngFor="let charac of charactersList; index as i" [character]='charac' [index]='i' (navigate)="navigateTo($event)"></app-character-list-item>
+            <!-- <div *ngFor="let character of charactersList; index as i">
+                <a [routerLink]="[i]">
+                    <article class="container__list__items">
+                        <img class="container__list__items__item1" src="{{ character.image }}" alt="{{ character.name }}">
+                        <h4 class="container__list__items__item2">{{ character.name }}</h4>
+                    </article>
+                </a>
+            </div> -->
+    </div>
+</div>
+
+<div>
+    <a class="anchor-back" [routerLink]="['']">VOLVER</a>
+</div>
+<!-- <div role="button" [routerLink]="['characters-details']"></div> -->

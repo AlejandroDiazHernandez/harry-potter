@@ -1,0 +1,42 @@
+.container {
+    margin: 0 auto;
+    max-width: 90%;
+  
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+ 
+      border: 2px solid white;
+      background-color: rgba(0,0,0,0.8);
+      padding: 30px;
+      
+      &__title {
+        color: yellow;
+        text-align: left;
+        border-bottom: 1px solid rgba(165, 164, 164, 0.774);
+        padding-bottom: 5px;
+  
+      }
+    }
+  }
+
+.btnSearchForm {
+  text-decoration: none;
+    background-color: orange;
+    color: red;
+    font-size: large;
+    border: 1px solid orange;
+    margin: 7px;
+    padding: 5px;
+}
+
+
+.btnSearchForm:hover{
+  text-decoration: none;
+  color:orange;
+  font-weight: bold;
+  border: 1px solid red;
+  background-color: red;
+}

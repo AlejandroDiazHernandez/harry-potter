@@ -1,0 +1,63 @@
+.form {
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5907e7e7440243daba01563a/1535646776767-YR3E9CJAS4RQ16ZSNWZG/ke17ZwdGBToddI8pDm48kAvsflNaq4u5bm4m3AC4MtF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UZn2IYqA_DaOWtoTY4rEjWNULKqxN5cwKC5Uxv43GzoOr6Osy_dUxNTp_VXDOR5Z4g/Harry+Potter+CH3.jpg?format=2500w');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    font-size: 23px;
+    font-family: cursive;
+
+    &__fieldset {
+        display: flex;
+        flex-direction: column;
+        padding: 107px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        &-label {
+            padding: 10px;
+        }
+
+        &-block{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            &-houses{
+                padding: 10px;
+            }
+        }
+    }
+    
+    
+}
+
+.li-search{
+    color: wheat;
+    font-size: x-large;
+}
+
+.ul-search{
+    border: 2px solid wheat;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.container__search__title{
+    color: yellow;
+    text-align: left;
+    border-bottom: 1px solid rgba(165, 164, 164, 0.774);
+    padding-bottom: 5px;
+}
+
+.error{
+    color: black;
+    border: 2px solid red;
+    background-color: red;
+}
+

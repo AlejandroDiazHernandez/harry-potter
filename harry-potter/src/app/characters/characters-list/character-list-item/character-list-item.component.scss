@@ -1,0 +1,20 @@
+.container {
+   
+    &__list {
+      
+      &__items{
+          border: 2px solid white;
+          margin: 10px;
+          padding: 30px;
+ 
+          &__item1{
+            width: 150px;
+            height: 200px;
+          }
+          &__item2{
+            color:white;
+            text-align: center;
+          }
+      }
+    }
+  }
